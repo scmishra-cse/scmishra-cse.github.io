@@ -9,27 +9,27 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0; /* Background for the page outside the resume */
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
-            padding-top: 20px; /* Some padding at the top */
-            padding-bottom: 20px; /* Some padding at the bottom */
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .resume-container {
             display: flex;
-            width: 800px; /* Adjust width as desired, A4 is wider but this is good for screen */
-            min-height: 900px; /* Approximate height */
+            width: 60vw;
+            min-height: 900px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            background-color: #ffffff; /* Fallback for right column */
+            background-color: #ffffff;
         }
 
         .left-column {
-            background-color: #30394c; /* Dark blue-gray from PDF */
+            background-color: #30394c;
             color: white;
-            width: 38%; /* Approximate width */
+            width: 38%;
             padding: 25px 20px;
             display: flex;
             flex-direction: column;
@@ -37,39 +37,39 @@
         }
 
         .profile-image-container {
-            width: 160px; /* Container size */
-            height: 160px; /* Container size */
+            width: 150px; /* Adjusted size */
+            height: 150px; /* Adjusted size */
             border-radius: 50%;
-            background-color: white; /* White circular background */
+            /* background-color: white; */ /* Removed to eliminate the white "border" effect */
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
-            overflow: hidden; /* To ensure image stays circular if it's slightly off */
+            overflow: hidden;
         }
 
         .profile-image {
-            width: 150px; /* Image size, slightly smaller than container for border effect */
-            height: 150px; /* Image size */
-            border-radius: 50%;
+            width: 100%; /* Image fills the container */
+            height: 100%; /* Image fills the container */
+            border-radius: 50%; /* Ensures the image itself is circular */
             object-fit: cover;
         }
 
         .skills-pills-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start; /* Align pills to the start of the container */
+            justify-content: flex-start;
             gap: 8px;
             margin-bottom: 25px;
-            width: 100%; /* Take full width of left column */
+            width: 100%;
         }
 
         .skill-pill {
-            background-color: #4f5b6a; /* Darker gray for badges */
+            background-color: #4f5b6a;
             color: white;
             padding: 5px 10px;
-            border-radius: 15px; /* Pill shape */
-            font-size: 0.75em; /* Smaller font for pills */
+            border-radius: 15px;
+            font-size: 0.75em;
             white-space: nowrap;
         }
 
@@ -84,7 +84,7 @@
             margin-top: 0;
             margin-bottom: 10px;
             padding-bottom: 5px;
-            border-bottom: 1px solid #6a7383; /* Lighter border within sidebar */
+            border-bottom: 1px solid #6a7383;
             text-align: left;
         }
 
@@ -106,16 +106,18 @@
             font-weight: bold;
             display: block;
             margin-bottom: 3px;
+font-size: 1.1em;
+
+
         }
         .certificate-item em {
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #cccccc;
         }
 
-
         .right-column {
             background-color: #ffffff;
-            width: 62%; /* Approximate width */
+            width: 62%;
             padding: 30px 35px;
         }
 
@@ -149,33 +151,26 @@
         .contact-info p {
             font-size: 0.85em;
             color: #555555;
-            margin: 4px 0;
+            margin: 6px 0; /* Adjusted margin for better spacing */
             line-height: 1.4;
         }
-
-        .technical-skills-text-block {
-            margin-bottom: 25px;
+        .contact-info a {
+            color: #555555; /* Or a specific link color like #007bff */
+            text-decoration: none; /* Removes underline, add back if preferred */
         }
-        .technical-skills-text-block h3 {
-            font-size: 1em; /* Smaller heading for this text block */
-            color: #333333;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .contact-info a:hover {
+            text-decoration: underline; /* Underline on hover for better UX */
         }
-        .technical-skills-text-block p {
-            font-size: 0.85em;
-            color: #555555;
-            line-height: 1.5;
-            word-spacing: 2px;
+        .contact-info .icon {
+            margin-right: 8px; /* Space between icon and text */
         }
 
-
-        .work-experience h2, .other-sections h2 { /* For potential future sections in right column */
+        .work-experience h2 {
             font-size: 1.4em;
             color: #333333;
             border-bottom: 2px solid #cccccc;
             padding-bottom: 8px;
-            margin-top: 0; /* If it's the first element or after a clear separation */
+            margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
         }
@@ -201,8 +196,8 @@
 
         .job-entry ul {
             list-style-type: disc;
-            margin-left: 0; /* Reset margin */
-            padding-left: 20px; /* Indent list items */
+            margin-left: 0;
+            padding-left: 20px;
             font-size: 0.9em;
             color: #444444;
             line-height: 1.5;
@@ -224,7 +219,7 @@
     <div class="resume-container">
         <div class="left-column">
             <div class="profile-image-container">
-                <img src="./profile-picture" alt="Shubham Chandra Mishra" class="profile-image">
+                <img src="./profile-picture.jpg" alt="Shubham Chandra Mishra" class="profile-image">
             </div>
 
             <div class="skills-pills-container">
@@ -252,10 +247,15 @@
             <section class="sidebar-section certificates">
                 <h2>CERTIFICATES</h2>
                 <div class="sidebar-content">
-                    <div class="certificate-item">
+    <div class="certificate-item">
+                        <p><strong>Mathematics Behind Large Language Models and Transformers</strong> <em>(05/2025-05/2025)</em></p>
+                        <p>This course Deep Dive into Transformer Mathematics: From Tokenization to Multi-Head Attention to Masked Language Modeling & Beyond</p>
+                    </div>
+<div class="certificate-item">
                         <p><strong>User Centered Design</strong> <em>(10/2020-01/2021)</em></p>
                         <p>During the UCD course we focused on the users and their needs in each phase of the design process.</p>
                     </div>
+
                     <div class="certificate-item">
                         <p><strong>Techincal Support Fundamentals</strong> <em>(09/2020-11/2020)</em></p>
                         <p>Here understand various IT aspects like Internet, computer hardware and software, troubleshooting and customer service.</p>
@@ -288,20 +288,15 @@
         <div class="right-column">
             <h1>Shubham Chandra Mishra</h1>
             <p class="title">Software Engineer</p>
-            <p class="summary">I am a Software Engineer with 3 years of total industry experience in building highly scalable and maintainable products. I love to contribute my skills and abilities in building awesome products. I am always ready to have new experiences, meet new people, and learn new things (curious geek). Learning about LLM and MCP's right now.</p>
+            <p class="summary">I am a Software Engineer with 3+ years of total industry experience in building highly scalable and maintainable products. I love to contribute my skills and abilities in building awesome products. I am always ready to have new experiences, meet new people, and learn new things (curious geek). Learning about LLM and MCP's right now.</p>
 
             <div class="contact-info">
-                <p>phsmishra@gmail.com</p>
-                <p>Bengaluru, India</p>
-                <p>twitter.com/shubh6200</p>
-                <p>6200567250</p>
-                <p>inlinkedin.com/in/shubham-chandra-mishra-6200567250</p>
-                <p>github.com/scmishra-cse</p>
-            </div>
-
-            <div class="technical-skills-text-block">
-                <h3>TECHNICAL SKILLS</h3>
-                <p>Javascript React NodeJS System Design Operating System Data Structure DBMS Docker Kubernetes Networking OIDC SAML OAuth OOP GitHub Git SSO HTML CSS MySQL Web Developement Cloud Computing Google Cloud Postman Rest APIs SCIM JIRA Okta</p>
+                <p><a href="mailto:phsmishra@gmail.com"><span class="icon">📧</span>Email: phsmishra@gmail.com</a></p>
+                <p><span class="icon">📍</span>Location: Bengaluru, India</p>
+                <p><a href="https://twitter.com/shubh6200" target="_blank" rel="noopener noreferrer"><span class="icon">🐦</span>Twitter: @shubh6200</a></p>
+                <p><a href="tel:6200567250"><span class="icon">📞</span>Phone: 6200567250</a></p>
+                <p><a href="https://linkedin.com/in/shubham-chandra-mishra-6200567250" target="_blank" rel="noopener noreferrer"><span class="icon">🔗</span>LinkedIn: shubham-chandra-mishra-6200567250</a></p>
+                <p><a href="https://github.com/scmishra-cse" target="_blank" rel="noopener noreferrer"><span class="icon">💻</span>GitHub: scmishra-cse</a></p>
             </div>
 
             <section class="work-experience">
