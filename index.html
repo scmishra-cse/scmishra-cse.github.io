@@ -1,133 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="Shubham-Icon"
-      sizes="180x180"
-      href="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Chandra Mishra - Resume</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* Background for the page outside the resume */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 20px; /* Some padding at the top */
+            padding-bottom: 20px; /* Some padding at the bottom */
+        }
 
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Primary Meta Tags -->
-    <title>Shubham Chnadra Mishra</title>
-    <meta name="title" content="Shubham Chnadra Mishra" />
-    <meta
-      name="description"
-      content="Shubham Chandra Mishra Portfolio Website. Here you can see all the details about Shubham Chnadra Mishra and his works."
-    />
-    <meta
-      name="keywords"
-      content="shubham, shubham mishra, shubham chnadra mishra, shubham chnadra, chandra, frontend developer, web developer, software engineer"
-    />
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="htpps://scmishra-cse.github.io/" />
-    <meta property="og:title" content="Shubham Chnadra Mishra" />
-    <meta
-      property="og:description"
-      content="Shubham Chandra Mishra Portfolio Website. Here you can see all the details about Shubham Chnadra Mishra and his works."
-    />
-    <meta
-      property="og:image"
-      content="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-    />
+        .resume-container {
+            display: flex;
+            width: 800px; /* Adjust width as desired, A4 is wider but this is good for screen */
+            min-height: 900px; /* Approximate height */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff; /* Fallback for right column */
+        }
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://scmishra-cse.github.io/" />
-    <meta property="twitter:title" content="Shubham Chnadra Mishra" />
-    <meta
-      property="twitter:description"
-      content="Shubham Chandra Mishra Portfolio Website. Here you can see all the details about Shubham Chnadra Mishra and his works."
-    />
-    <meta
-      property="twitter:image"
-      content="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-    />
+        .left-column {
+            background-color: #30394c; /* Dark blue-gray from PDF */
+            color: white;
+            width: 38%; /* Approximate width */
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    <link
-      href="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <link
-      href="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-      rel="apple-touch-icon"
-    />
-    <link rel="stylesheet" href="./main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div>
-        <img
-          src="https://assets.website-files.com/627f635fb401680bbec761ef/6284c4f41a07d438a6ef1f34_Memoji_2.png"
-        />
-      </div>
-      <div>
-        <h1>Welcome to my Personal Portfolio Website</h1>
-        <h2>Hi, I'm Shubham Chandra Mishra🤝</h2>
-        <p>
-          🤔 Exploring new technologies and developing software solutions and
-          quick hacks.<br />
-          🎓 Studying Computer Science and Engineering at Sarala Birla
-          University.<br />
-          💼 Working as Frontend Developer.<br />
-          🌱 Learning more about Web Dev and DevOps.<br />
-          ✍️ Pursuing Web Applications Development as hobbies/side hustles.
-        </p>
-        <div class="socialLinks">
-          <a
-            href="https://github.com/scmishra-cse"
-            style="text-decoration: none; margin-right: 20px"
-          >
-            <img
-              height="30"
-              width="100"
-              src="https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github"
-            />
-          </a>
+        .profile-image-container {
+            width: 160px; /* Container size */
+            height: 160px; /* Container size */
+            border-radius: 50%;
+            background-color: white; /* White circular background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: hidden; /* To ensure image stays circular if it's slightly off */
+        }
 
-          <a
-            href="https://www.linkedin.com/in/shubham-chandra-mishra-6200567250/"
-            style="text-decoration: none; margin-right: 20px"
-          >
-            <img
-              height="30"
-              width="100"
-              src="https://img.shields.io/badge/-Linkedin-333333?style=flat&logo=linkedin"
-            />
-          </a>
-          <a
-            href="https://twitter.com/shubh6200"
-            style="text-decoration: none; margin-right: 20px"
-          >
-            <img
-              height="30"
-              width="100"
-              src="https://img.shields.io/badge/-Twitter-333333?style=flat&logo=twitter"
-            />
-          </a>
+        .profile-image {
+            width: 150px; /* Image size, slightly smaller than container for border effect */
+            height: 150px; /* Image size */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .skills-pills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align pills to the start of the container */
+            gap: 8px;
+            margin-bottom: 25px;
+            width: 100%; /* Take full width of left column */
+        }
+
+        .skill-pill {
+            background-color: #4f5b6a; /* Darker gray for badges */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px; /* Pill shape */
+            font-size: 0.75em; /* Smaller font for pills */
+            white-space: nowrap;
+        }
+
+        .sidebar-section {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-section h2 {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #6a7383; /* Lighter border within sidebar */
+            text-align: left;
+        }
+
+        .sidebar-section p,
+        .sidebar-section ul {
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .sidebar-section ul {
+            padding-left: 20px;
+            list-style-position: outside;
+        }
+        .sidebar-section ul li {
+            margin-bottom: 5px;
+        }
+        .certificate-item strong, .achievement-item strong {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .certificate-item em {
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+
+        .right-column {
+            background-color: #ffffff;
+            width: 62%; /* Approximate width */
+            padding: 30px 35px;
+        }
+
+        .right-column h1 {
+            font-size: 2.2em;
+            color: #333333;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .right-column .title {
+            font-size: 1.3em;
+            color: #555555;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .right-column .summary {
+            font-size: 0.9em;
+            color: #444444;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            font-size: 0.85em;
+            color: #555555;
+            margin: 4px 0;
+            line-height: 1.4;
+        }
+
+        .technical-skills-text-block {
+            margin-bottom: 25px;
+        }
+        .technical-skills-text-block h3 {
+            font-size: 1em; /* Smaller heading for this text block */
+            color: #333333;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .technical-skills-text-block p {
+            font-size: 0.85em;
+            color: #555555;
+            line-height: 1.5;
+            word-spacing: 2px;
+        }
+
+
+        .work-experience h2, .other-sections h2 { /* For potential future sections in right column */
+            font-size: 1.4em;
+            color: #333333;
+            border-bottom: 2px solid #cccccc;
+            padding-bottom: 8px;
+            margin-top: 0; /* If it's the first element or after a clear separation */
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .job-entry {
+            margin-bottom: 20px;
+        }
+
+        .job-entry h3 {
+            font-size: 1.15em;
+            color: #404040;
+            margin-top: 0;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .job-entry .company-details {
+            font-size: 0.9em;
+            color: #666666;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .job-entry ul {
+            list-style-type: disc;
+            margin-left: 0; /* Reset margin */
+            padding-left: 20px; /* Indent list items */
+            font-size: 0.9em;
+            color: #444444;
+            line-height: 1.5;
+        }
+        .job-entry ul li {
+            margin-bottom: 6px;
+        }
+
+        .education-item p, .language-item p {
+            margin: 3px 0;
+        }
+        .education-item strong {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="left-column">
+            <div class="profile-image-container">
+                <img src="./profile-picture.jpeg" alt="Shubham Chandra Mishra" class="profile-image">
+            </div>
+
+            <div class="skills-pills-container">
+                <span class="skill-pill">Javascript</span><span class="skill-pill">React</span><span class="skill-pill">NodeJS</span>
+                <span class="skill-pill">System Design</span><span class="skill-pill">Operating System</span><span class="skill-pill">Data Structure</span>
+                <span class="skill-pill">DBMS</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span>
+                <span class="skill-pill">Networking</span><span class="skill-pill">OIDC</span><span class="skill-pill">SAML</span>
+                <span class="skill-pill">OAuth</span><span class="skill-pill">OOP</span><span class="skill-pill">GitHub</span>
+                <span class="skill-pill">Git</span><span class="skill-pill">SSO</span><span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span><span class="skill-pill">MySQL</span><span class="skill-pill">Web Developement</span>
+                <span class="skill-pill">Cloud Computing</span><span class="skill-pill">Google Cloud</span><span class="skill-pill">Postman</span>
+                <span class="skill-pill">Rest APIs</span><span class="skill-pill">SCIM</span><span class="skill-pill">JIRA</span>
+                <span class="skill-pill">Okta</span>
+            </div>
+
+            <section class="sidebar-section achievements">
+                <h2>ACHIEVEMENTS</h2>
+                <div class="sidebar-content">
+                    <p class="achievement-item"><strong>Cloud Rider - 2020 winner</strong></p>
+                    <p class="achievement-item"><strong>Postman Student Expert (08/2021-02/2023)</strong></p>
+                    <p>Gave few workshops about how to use postman as a developer.</p>
+                </div>
+            </section>
+
+            <section class="sidebar-section certificates">
+                <h2>CERTIFICATES</h2>
+                <div class="sidebar-content">
+                    <div class="certificate-item">
+                        <p><strong>User Centered Design</strong> <em>(10/2020-01/2021)</em></p>
+                        <p>During the UCD course we focused on the users and their needs in each phase of the design process.</p>
+                    </div>
+                    <div class="certificate-item">
+                        <p><strong>Techincal Support Fundamentals</strong> <em>(09/2020-11/2020)</em></p>
+                        <p>Here understand various IT aspects like Internet, computer hardware and software, troubleshooting and customer service.</p>
+                    </div>
+                     <div class="certificate-item">
+                        <p><strong>AWS Cloud Practitioner Essentials</strong></p>
+                        <p>Learned about all AWS services like EC2, EC3, Lambda etc</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sidebar-section education">
+                <h2>EDUCATION</h2>
+                <div class="sidebar-content education-item">
+                     <p><strong>Sarala Birla University (B.tech in CSE)</strong></p>
+                     <p>(08/2019-07/2023)</p>
+                     <p>Grade-8CGPA</p>
+                </div>
+            </section>
+
+            <section class="sidebar-section languages">
+                <h2>LANGUAGES</h2>
+                <div class="sidebar-content language-item">
+                    <p><strong>English</strong> - Full Professional Proficiency</p>
+                    <p><strong>Hindi</strong> - Native or Bilingual Proficiency</p>
+                </div>
+            </section>
         </div>
-      </div>
+
+        <div class="right-column">
+            <h1>Shubham Chandra Mishra</h1>
+            <p class="title">Software Engineer</p>
+            <p class="summary">I am a Software Engineer with 3 years of total industry experience in building highly scalable and maintainable products. I love to contribute my skills and abilities in building awesome products. I am always ready to have new experiences, meet new people, and learn new things (curious geek). Learning about LLM and MCP's right now.</p>
+
+            <div class="contact-info">
+                <p>phsmishra@gmail.com</p>
+                <p>Bengaluru, India</p>
+                <p>twitter.com/shubh6200</p>
+                <p>6200567250</p>
+                <p>inlinkedin.com/in/shubham-chandra-mishra-6200567250</p>
+                <p>github.com/scmishra-cse</p>
+            </div>
+
+            <div class="technical-skills-text-block">
+                <h3>TECHNICAL SKILLS</h3>
+                <p>Javascript React NodeJS System Design Operating System Data Structure DBMS Docker Kubernetes Networking OIDC SAML OAuth OOP GitHub Git SSO HTML CSS MySQL Web Developement Cloud Computing Google Cloud Postman Rest APIs SCIM JIRA Okta</p>
+            </div>
+
+            <section class="work-experience">
+                <h2>WORK EXPERIENCE</h2>
+                <div class="job-entry">
+                    <h3>Software Engineer II</h3>
+                    <p class="company-details">Okta inc. | 04/2025-Present | Bengaluru, India</p>
+                    <ul>
+                        <li>Re-building okta Workflows to boost customer adoption rate because Customer experience is key.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <h3>Software Engineer I</h3>
+                    <p class="company-details">Okta Inc. | 03/2024-Present | Bengaluru, India</p>
+                    <ul>
+                        <li>Implemented innovative solutions using React, Node.js, and JavaScript to enhance the functionality and usability of the Okta workflows builder (no code automation tool).</li>
+                        <li>Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality software.</li>
+                        <li>Conducted code reviews, products and features development for Okta workflows builder product.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <h3>Application Analyst</h3>
+                    <p class="company-details">Okta Inc. | 07/2023-02/2024 | Bengaluru, India</p>
+                    <ul>
+                        <li>Implement OIDC, SAML, and proprietary Secure Web Authentication (SWA) SSO integrations using wizards and declarative tools</li>
+                        <li>Diagnose, troubleshoot and test unique SSO and SCIM user provisioning integration submissions issues</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <h3>Software Engineer</h3>
+                    <p class="company-details">KMUnotag Pvt. Ltd. | 04/2022-06/2023 | Remote</p>
+                    <ul>
+                        <li>Worked with Javascript, React js, Angular, Node.Js, 11ty, and SCSS for frontend application development of many dynamic and static applications, Libraries, and SDKs Software development.</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <h3>Software Engineer Intern</h3>
+                    <p class="company-details">KMUnotag Pvt. Ltd. | 01/2022-03/2022 | Remote</p>
+                    <ul>
+                        <li>Actively worked with ReactJs, Material UI, Tailwind CSS, and JavaScript for application software development</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </div>
-  </body>
+</body>
 </html>
