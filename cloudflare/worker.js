@@ -12,11 +12,20 @@ const json = (status, body, extra = {}) => new Response(JSON.stringify(body), {
   headers: { ...corsHeaders, 'Content-Type': 'application/json', ...extra }
 });
 
+// Base64URL is used for signed session-cookie values.
 const encode = (value) => {
   const bytes = new TextEncoder().encode(value);
   let binary = '';
   bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
   return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+};
+
+// GitHub's Contents API requires standard Base64, including padding.
+const githubBase64 = (value) => {
+  const bytes = new TextEncoder().encode(value);
+  let binary = '';
+  bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+  return btoa(binary);
 };
 
 const decode = (value) => {
@@ -68,7 +77,7 @@ async function publish(body, env) {
   const response = await fetch(`https://api.github.com/repos/${env.OWNER}/${env.REPO}/contents/${path}`, {
     method: 'PUT',
     headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'Content-Type': 'application/json', 'User-Agent': 'scmishra-blog-admin', 'X-GitHub-Api-Version': '2022-11-28' },
-    body: JSON.stringify({ message: `Add blog post: ${title}`, content: encode(html) })
+    body: JSON.stringify({ message: `Add blog post: ${title}`, content: githubBase64(html) })
   });
   if (!response.ok) throw new Error(`GitHub returned ${response.status}: ${await response.text()}`);
   return { url: `https://${env.OWNER}.github.io/posts/${slug}.html` };
