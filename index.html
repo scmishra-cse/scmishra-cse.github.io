@@ -51,10 +51,10 @@
 
         .resume-container {
             display: flex;
-            width: 800px; /* Desktop width */
-            min-height: 900px; /* Desktop min-height */
+            width: 800px;
+            min-height: 900px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            background-color: #ffffff; /* Fallback, actual BG by columns */
+            background-color: #ffffff;
         }
 
         .left-column {
@@ -89,7 +89,7 @@
         .skills-pills-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start; /* Aligns to left on desktop */
+            justify-content: flex-start;
             gap: 8px;
             margin-bottom: 25px;
             width: 100%;
@@ -137,7 +137,7 @@
             font-weight: bold;
             display: block;
             margin-bottom: 3px;
-        font-size: 1.1em
+            font-size: 1.1em;
         }
         .certificate-item em {
             font-size: 0.8em;
@@ -183,7 +183,7 @@
             color: #555555;
             margin: 6px 0;
             line-height: 1.4;
-            word-break: break-word; /* Helps prevent overflow with long links */
+            word-break: break-word;
         }
         .contact-info a {
             color: #555555;
@@ -196,271 +196,265 @@
             margin-right: 8px;
         }
 
-        .work-experience h2 {
+        .work-experience h2,
+        .education h2,
+        .writing h2,
+        .awards h2 {
             font-size: 1.4em;
             color: #333333;
-            border-bottom: 2px solid #cccccc;
-            padding-bottom: 8px;
             margin-top: 0;
             margin-bottom: 15px;
+        }
+
+        .job {
+            margin-bottom: 22px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #333333;
+            margin: 0;
+        }
+
+        .company {
+            font-size: 0.9em;
+            color: #555555;
             font-weight: 600;
         }
 
-        .job-entry {
-            margin-bottom: 20px;
+        .job-date {
+            font-size: 0.78em;
+            color: #777777;
+            white-space: nowrap;
         }
 
-        .job-entry h3 {
-            font-size: 1.15em;
-            color: #404040;
-            margin-top: 0;
-            margin-bottom: 3px;
-            font-weight: bold;
-        }
-
-        .job-entry .company-details {
-            font-size: 0.9em;
-            color: #666666;
-            margin-bottom: 8px;
-            font-style: italic;
-        }
-
-        .job-entry ul {
-            list-style-type: disc;
-            margin-left: 0;
-            padding-left: 20px;
+        .job ul {
+            margin: 8px 0 0 18px;
+            padding: 0;
             font-size: 0.9em;
             color: #444444;
-            line-height: 1.5;
-        }
-        .job-entry ul li {
-            margin-bottom: 6px;
+            line-height: 1.6;
         }
 
-        .education-item p, .language-item p {
-            margin: 3px 0;
-        }
-        .education-item strong {
-            font-weight: bold;
+        .job li {
+            margin-bottom: 4px;
         }
 
-        /* Responsive adjustments for mobile devices */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 0;
-                padding-bottom: 0;
-            }
+        .section-block {
+            margin-bottom: 18px;
+        }
 
+        .section-block h3 {
+            font-size: 1.1em;
+            margin: 0 0 8px;
+            color: #333333;
+        }
+
+        .section-block p,
+        .section-block li {
+            font-size: 0.9em;
+            color: #444444;
+            line-height: 1.6;
+        }
+
+        .section-block ul {
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+
+        .strong-link {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .strong-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 820px) {
             .resume-container {
-                flex-direction: column; /* Stack columns vertically */
-                width: 100%; /* Full width for mobile */
-                min-height: 100vh; /* At least full viewport height */
-                box-shadow: none; /* Remove shadow for full-width mobile view */
+                flex-direction: column;
+                width: 100%;
+                max-width: 800px;
             }
-
             .left-column,
             .right-column {
-                width: 100%; /* Make columns take full width */
-                padding: 20px; /* Unified padding for mobile */
+                width: 100%;
             }
-
-            .right-column {
-                 /* Ensures consistent padding even if first element has margin-top:0 */
-                padding-top: 25px; /* Add a bit of space above right column content when stacked */
-            }
-
-            .profile-image-container {
-                width: 120px; /* Slightly smaller profile image */
-                height: 120px;
-                margin-top: 10px; /* Add some space at the top of the left column */
-            }
-
-            .skills-pills-container {
-                justify-content: center; /* Center skill pills for a cleaner look on mobile */
-            }
-
-            .right-column h1 {
-                font-size: 1.9em; /* Adjust heading font size */
-            }
-
-            .right-column .title {
-                font-size: 1.15em; /* Adjust title font size */
-            }
-
-            .sidebar-section h2,
-            .work-experience h2 {
-                font-size: 1.1em; /* Adjust section heading font sizes */
-            }
-
-            .right-column .summary,
-            .sidebar-section p,
-            .sidebar-section ul,
-            .contact-info p,
-            .job-entry .company-details,
-            .job-entry ul {
-                font-size: 0.9em; /* Slightly larger base font for readability on mobile */
-            }
-            .skill-pill {
-                font-size: 0.8em;
+            .site-header {
+                width: 100%;
+                padding: 0 12px;
+                box-sizing: border-box;
             }
         }
-         @media (max-width: 480px) { /* Further adjustments for very small screens */
-            .right-column h1 {
-                font-size: 1.7em;
-            }
-            .right-column .title {
-                font-size: 1.05em;
-            }
-            .sidebar-section p,
-            .sidebar-section ul,
-            .contact-info p,
-            .job-entry .company-details,
-            .job-entry ul,
-            .right-column .summary {
-                font-size: 0.85em; /* Ensure text isn't too tiny */
-            }
-            .profile-image-container {
-                width: 100px;
-                height: 100px;
-            }
-            .left-column, .right-column {
-                padding: 15px; /* Reduce padding on very small screens */
-            }
-        }
-
     </style>
 </head>
 <body>
-    <div class="site-header">
+    <header class="site-header">
         <a class="blog-link" href="./blog.html">Blog</a>
-    </div>
+    </header>
 
     <div class="resume-container">
-        <div class="left-column">
+        <aside class="left-column">
             <div class="profile-image-container">
-                <img src="./profile-picture" alt="Shubham Chandra Mishra" class="profile-image">
+                <img class="profile-image" src="./profile-picture" alt="Shubham Chandra Mishra">
             </div>
 
-            <div class="skills-pills-container">
-                <span class="skill-pill">Javascript</span><span class="skill-pill">React</span><span class="skill-pill">NodeJS</span>
-                <span class="skill-pill">System Design</span><span class="skill-pill">Operating System</span><span class="skill-pill">Data Structure</span>
-                <span class="skill-pill">DBMS</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span>
-                <span class="skill-pill">Networking</span><span class="skill-pill">OIDC</span><span class="skill-pill">SAML</span>
-                <span class="skill-pill">OAuth</span><span class="skill-pill">OOP</span><span class="skill-pill">GitHub</span>
-                <span class="skill-pill">Git</span><span class="skill-pill">SSO</span><span class="skill-pill">HTML</span>
-                <span class="skill-pill">CSS</span><span class="skill-pill">MySQL</span><span class="skill-pill">Web Developement</span>
-                <span class="skill-pill">Cloud Computing</span><span class="skill-pill">Google Cloud</span><span class="skill-pill">Postman</span>
-                <span class="skill-pill">Rest APIs</span><span class="skill-pill">SCIM</span><span class="skill-pill">JIRA</span>
-                <span class="skill-pill">Okta</span><span class="skill-pill">LLM</span><span class="skill-pill">MCP</span>
-            </div>
-
-            <section class="sidebar-section achievements">
-                <h2>ACHIEVEMENTS</h2>
-                <div class="sidebar-content">
-                    <p class="achievement-item"><strong>Cloud Rider - 2020 winner</strong></p>
-                    <p class="achievement-item"><strong>Postman Student Expert (08/2021-02/2023)</strong></p>
-                    <p>Gave few workshops about how to use postman as a developer.</p>
+            <section class="sidebar-section">
+                <h2>Skills</h2>
+                <div class="skills-pills-container">
+                    <span class="skill-pill">NodeJS</span>
+                    <span class="skill-pill">React</span>
+                    <span class="skill-pill">JavaScript</span>
+                    <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">Redux</span>
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">ExpressJS</span>
+                    <span class="skill-pill">REST APIs</span>
+                    <span class="skill-pill">SQL</span>
+                    <span class="skill-pill">Microservices</span>
+                    <span class="skill-pill">Distributed Systems</span>
+                    <span class="skill-pill">Event-driven Architecture</span>
+                    <span class="skill-pill">PostgreSQL</span>
+                    <span class="skill-pill">Redis</span>
+                    <span class="skill-pill">Docker</span>
+                    <span class="skill-pill">Kubernetes</span>
+                    <span class="skill-pill">AWS</span>
+                    <span class="skill-pill">GCP</span>
+                    <span class="skill-pill">OIDC</span>
+                    <span class="skill-pill">SAML</span>
+                    <span class="skill-pill">OAuth2</span>
+                    <span class="skill-pill">SSO</span>
+                    <span class="skill-pill">SCIM</span>
+                    <span class="skill-pill">Okta</span>
                 </div>
             </section>
 
-            <section class="sidebar-section certificates">
-                <h2>CERTIFICATES</h2>
-                <div class="sidebar-content">
-  <div class="certificate-item">
-                        <p><strong>Mathematics Behind Large Language Models and Transformers</strong> <em>(05/2025-05/2025)</em></p>
-                        <p>In this course I deep dived into Transformer Architecture Mathematics: From Tokenization to Multi-Head Attention to Masked Language Modeling & Beyond</p>
-                    </div>
-<div class="certificate-item">
-                    <div class="certificate-item">
-                        <p><strong>User Centered Design</strong> <em>(10/2020-01/2021)</em></p>
-                        <p>During the UCD course we focused on the users and their needs in each phase of the design process.</p>
-                    </div>
-                    <div class="certificate-item">
-                        <p><strong>Techincal Support Fundamentals</strong> <em>(09/2020-11/2020)</em></p>
-                        <p>Here understand various IT aspects like Internet, computer hardware and software, troubleshooting and customer service.</p>
-                    </div>
-                     <div class="certificate-item">
-                        <p><strong>AWS Cloud Practitioner Essentials</strong></p>
-                        <p>Learned about all AWS services like EC2, EC3, Lambda etc</p>
-                    </div>
-                </div>
+            <section class="sidebar-section">
+                <h2>AI & Tools</h2>
+                <ul>
+                    <li>LLMs</li>
+                    <li>Claude Code</li>
+                    <li>Cursor</li>
+                    <li>Agentic Workflows</li>
+                </ul>
             </section>
 
-            <section class="sidebar-section education">
-                <h2>EDUCATION</h2>
-                <div class="sidebar-content education-item">
-                     <p><strong>Sarala Birla University (B.tech in CSE)</strong></p>
-                     <p>(08/2019-07/2023)</p>
-                     <p>Grade-8CGPA</p>
-                </div>
+            <section class="sidebar-section">
+                <h2>Languages</h2>
+                <ul>
+                    <li><strong>English</strong><br>Full Professional Proficiency</li>
+                    <li><strong>Hindi</strong><br>Native or Bilingual Proficiency</li>
+                </ul>
             </section>
+        </aside>
 
-            <section class="sidebar-section languages">
-                <h2>LANGUAGES</h2>
-                <div class="sidebar-content language-item">
-                    <p><strong>English</strong> - Full Professional Proficiency</p>
-                    <p><strong>Hindi</strong> - Native or Bilingual Proficiency</p>
-                </div>
-            </section>
-        </div>
-
-        <div class="right-column">
+        <main class="right-column">
             <h1>Shubham Chandra Mishra</h1>
-            <p class="title">Software Engineer</p>
-            <p class="summary">I am a Software Engineer with 3+ years of total industry experience in building highly scalable and maintainable products. I love to contribute my skills and abilities to organisations where I can contribute to solving businesses and real-world problems with a focus on product quality and customer impact.</p>
+            <p class="title">Software Engineer II | Fullstack &amp; AI Systems</p>
+
+            <div class="summary">
+                Software Engineer II with 4+ years of experience designing, building, and operating production full-stack systems across workflow automation, distributed systems, integrations, and backend services. Strong experience owning features end-to-end, from technical design and architecture through implementation, deployment, and production optimization. Hands-on with Node.js, Java, React, PostgreSQL, Redis, Docker, and Kubernetes, with growing expertise in microservices and AI-powered engineering workflows.
+            </div>
 
             <div class="contact-info">
-                <p><a href="mailto:phsmishra@gmail.com"><span class="icon">📧</span>Email: phsmishra@gmail.com</a></p>
-                <p><span class="icon">📍</span>Location: Bengaluru, India</p>
-                <p><a href="https://twitter.com/shubh6200" target="_blank" rel="noopener noreferrer"><span class="icon">🐦</span>Twitter: @shubh6200</a></p>
-                <p><a href="tel:6200567250"><span class="icon">📞</span>Phone: 6200567250</a></p>
-                <p><a href="https://linkedin.com/in/shubham-chandra-mishra-6200567250" target="_blank" rel="noopener noreferrer"><span class="icon">🔗</span>LinkedIn: shubham-chandra-mishra-6200567250</a></p>
-                <p><a href="https://github.com/scmishra-cse" target="_blank" rel="noopener noreferrer"><span class="icon">💻</span>GitHub: scmishra-cse</a></p>
+                <p><span class="icon">✉</span><a href="mailto:phsmishra@gmail.com">phsmishra@gmail.com</a></p>
+                <p><span class="icon">☎</span>+91 6200567250</p>
+                <p><span class="icon">📍</span>Bengaluru, India</p>
+                <p><span class="icon">💼</span><a href="https://www.linkedin.com/in/shubham-chandra-mishra-6200567250" target="_blank" rel="noreferrer">LinkedIn</a></p>
+                <p><span class="icon">𝕏</span><a href="https://x.com/shubh6200" target="_blank" rel="noreferrer">X</a></p>
+                <p><span class="icon">✍</span><a href="https://scmishra.medium.com/" target="_blank" rel="noreferrer">Medium</a></p>
             </div>
 
             <section class="work-experience">
-                <h2>WORK EXPERIENCE</h2>
-                <div class="job-entry">
-                    <h3>Software Engineer II</h3>
-                    <p class="company-details">Okta inc. | 04/2025-Present | Bengaluru, India</p>
+                <h2>Work Experience</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <p class="job-title">Software Engineer II</p>
+                        <span class="job-date">Apr 2025 – Present</span>
+                    </div>
+                    <div class="company">Okta, Inc. · Bengaluru, India</div>
                     <ul>
-                        <li>Re-building okta Workflows to boost customer adoption rate because <strong> Customer experience is key.</strong></li>
-                        <li>Mentoring SDE interns.</li>
+                        <li>Owned end-to-end delivery of complex features, from technical design and architecture through implementation, production deployment, monitoring, and optimization.</li>
+                        <li>Built and validated rapid POCs for complex engineering and AI use cases using Claude and LLM tooling, translating ambiguous requirements into working implementations.</li>
+                        <li>Developed full-stack microservices using Java (Spring Boot) and React, contributing to system architecture, design, and implementation from scratch.</li>
+                        <li>Mentored junior engineers through technical guidance.</li>
                     </ul>
                 </div>
-                <div class="job-entry">
-                    <h3>Software Engineer I</h3>
-                    <p class="company-details">Okta Inc. | 03/2024-Present | Bengaluru, India</p>
+
+                <div class="job">
+                    <div class="job-header">
+                        <p class="job-title">Software Engineer I</p>
+                        <span class="job-date">Mar 2024 – Mar 2025</span>
+                    </div>
+                    <div class="company">Okta Inc. · Bengaluru, India</div>
                     <ul>
-                        <li>Implemented innovative solutions using React, Node.js, and JavaScript to enhance the functionality and usability of the Okta workflows builder (no code automation tool built for customers).</li>
-                        <li>Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality software.</li>
-                        <li>Conducted code reviews, product and feature development for Okta workflows builder product.</li>
+                        <li>Developed and shipped core no-code automation features for Okta Workflows, a globally used identity automation platform, using Node.js and JavaScript.</li>
+                        <li>Built complex workflow copy/paste and bulk-action capabilities, enabling users to manage and modify workflows more efficiently at scale.</li>
+                        <li>Optimized database queries and backend code paths while implementing Redis-based distributed locking to prevent race conditions and concurrency issues.</li>
                     </ul>
                 </div>
-                <div class="job-entry">
-                    <h3>Application Analyst</h3>
-                    <p class="company-details">Okta Inc. | 07/2023-02/2024 | Bengaluru, India</p>
+
+                <div class="job">
+                    <div class="job-header">
+                        <p class="job-title">Application Engineer</p>
+                        <span class="job-date">Jul 2023 – Feb 2024</span>
+                    </div>
+                    <div class="company">Okta Inc. · Bengaluru, India</div>
                     <ul>
-                        <li>Implement OIDC, SAML, and proprietary Secure Web Authentication (SWA) SSO integrations using wizards and declarative tools</li>
-                        <li>Diagnose, troubleshoot and test unique SSO and SCIM user provisioning integration submissions issues</li>
+                        <li>Troubleshot complex SSO and SCIM provisioning issues end-to-end, diagnosing integration failures across customer environments and driving issues through resolution.</li>
                     </ul>
                 </div>
-                 <div class="job-entry">
-                    <h3>Software Engineer</h3>
-                    <p class="company-details">KMUnotag Pvt. Ltd. | 04/2022-06/2023 | Remote</p>
+
+                <div class="job">
+                    <div class="job-header">
+                        <p class="job-title">Founding Software Engineer</p>
+                        <span class="job-date">Apr 2022 – Jun 2023</span>
+                    </div>
+                    <div class="company">KMUnotag Pvt. Ltd. · Remote</div>
                     <ul>
-                        <li>Worked with Javascript, React js, Angular, Node.Js, 11ty, and SCSS for frontend application development of many dynamic and static applications, Libraries, and SDKs solving real-world business needs.</li>
-                    </ul>
-                </div>
-                 <div class="job-entry">
-                    <h3>Software Engineer Intern</h3>
-                    <p class="company-details">KMUnotag Pvt. Ltd. | 01/2022-03/2022 | Remote</p>
-                    <ul>
-                        <li>Actively worked with ReactJs, Material UI, Tailwind CSS, and JavaScript for application software development</li>
+                        <li>Worked with Node, JavaScript, React.js, and Angular for full-stack application development of many dynamic and static applications, libraries, and SDKs.</li>
                     </ul>
                 </div>
             </section>
-        </div>
+
+            <section class="awards section-block">
+                <h2>Achievements</h2>
+                <p>Recognized as a High Performer for two consecutive years, reflecting consistent ownership and delivery across many high-impact projects.</p>
+            </section>
+
+            <section class="writing section-block">
+                <h2>AI &amp; Technical Writing</h2>
+                <ul>
+                    <li><strong>AI-Assisted Engineering:</strong> Extensive use of Claude Code for rapid prototyping, codebase exploration, debugging complex issues, technical research, and turning ambiguous requirements into working POCs with lightning speed.</li>
+                    <li><strong>AI Research &amp; Writing:</strong> Regularly read and analyze recent AI research papers, sharing technical insights on X.</li>
+                </ul>
+            </section>
+
+            <section class="education section-block">
+                <h2>Education</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <p class="job-title">Bachelor of Technology — Major in Computer Science</p>
+                        <span class="job-date">Aug 2019 – Jul 2023</span>
+                    </div>
+                    <div class="company">Sarala Birla University</div>
+                    <ul>
+                        <li>Grade: 8.1 CGPA</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
