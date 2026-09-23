@@ -12,12 +12,41 @@
             font-family: 'Arial', sans-serif;
             background-color: #f0f0f0;
             display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Aligns resume to top if page is taller */
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
             min-height: 100vh;
             padding-top: 20px;
             padding-bottom: 20px;
             box-sizing: border-box;
+        }
+
+        .site-header {
+            width: 800px;
+            max-width: calc(100% - 24px);
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+        }
+
+        .blog-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #30394c;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(48, 57, 76, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .blog-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(48, 57, 76, 0.26);
         }
 
         .resume-container {
@@ -108,7 +137,7 @@
             font-weight: bold;
             display: block;
             margin-bottom: 3px;
-font-size: 1.1em
+        font-size: 1.1em
         }
         .certificate-item em {
             font-size: 0.8em;
@@ -302,6 +331,10 @@ font-size: 1.1em
     </style>
 </head>
 <body>
+    <div class="site-header">
+        <a class="blog-link" href="./blog.html">Blog</a>
+    </div>
+
     <div class="resume-container">
         <div class="left-column">
             <div class="profile-image-container">
@@ -333,7 +366,7 @@ font-size: 1.1em
             <section class="sidebar-section certificates">
                 <h2>CERTIFICATES</h2>
                 <div class="sidebar-content">
- <div class="certificate-item">
+  <div class="certificate-item">
                         <p><strong>Mathematics Behind Large Language Models and Transformers</strong> <em>(05/2025-05/2025)</em></p>
                         <p>In this course I deep dived into Transformer Architecture Mathematics: From Tokenization to Multi-Head Attention to Masked Language Modeling & Beyond</p>
                     </div>
@@ -374,7 +407,7 @@ font-size: 1.1em
         <div class="right-column">
             <h1>Shubham Chandra Mishra</h1>
             <p class="title">Software Engineer</p>
-            <p class="summary">I am a Software Engineer with 3+ years of total industry experience in building highly scalable and maintainable products. I love to contribute my skills and abilities in building awesome products. I am always ready to have new experiences, meet new people, and learn new things (curious geek). Learning about LLM and MCP's right now.</p>
+            <p class="summary">I am a Software Engineer with 3+ years of total industry experience in building highly scalable and maintainable products. I love to contribute my skills and abilities to organisations where I can contribute to solving businesses and real-world problems with a focus on product quality and customer impact.</p>
 
             <div class="contact-info">
                 <p><a href="mailto:phsmishra@gmail.com"><span class="icon">📧</span>Email: phsmishra@gmail.com</a></p>
@@ -399,9 +432,9 @@ font-size: 1.1em
                     <h3>Software Engineer I</h3>
                     <p class="company-details">Okta Inc. | 03/2024-Present | Bengaluru, India</p>
                     <ul>
-                        <li>Implemented innovative solutions using React, Node.js, and JavaScript to enhance the functionality and usability of the Okta workflows builder (no code automation tool).</li>
+                        <li>Implemented innovative solutions using React, Node.js, and JavaScript to enhance the functionality and usability of the Okta workflows builder (no code automation tool built for customers).</li>
                         <li>Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality software.</li>
-                        <li>Conducted code reviews, products and features development for Okta workflows builder product.</li>
+                        <li>Conducted code reviews, product and feature development for Okta workflows builder product.</li>
                     </ul>
                 </div>
                 <div class="job-entry">
@@ -416,7 +449,7 @@ font-size: 1.1em
                     <h3>Software Engineer</h3>
                     <p class="company-details">KMUnotag Pvt. Ltd. | 04/2022-06/2023 | Remote</p>
                     <ul>
-                        <li>Worked with Javascript, React js, Angular, Node.Js, 11ty, and SCSS for frontend application development of many dynamic and static applications, Libraries, and SDKs Software development.</li>
+                        <li>Worked with Javascript, React js, Angular, Node.Js, 11ty, and SCSS for frontend application development of many dynamic and static applications, Libraries, and SDKs solving real-world business needs.</li>
                     </ul>
                 </div>
                  <div class="job-entry">
