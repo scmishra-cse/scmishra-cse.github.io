@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Notes and articles by Shubham Chandra Mishra about software engineering, identity, and building for the web.">
+  <title>Blog | Shubham Chandra Mishra</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #667085;
+      --paper: #f7f9fc;
+      --card: #ffffff;
+      --line: #e5eaf2;
+      --accent: #635bff;
+      --accent-dark: #443cc2;
+      --sidebar: #30394c;
+      --shadow: 0 18px 50px rgba(30, 42, 72, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    .hero {
+      background: radial-gradient(circle at 80% 10%, rgba(99, 91, 255, .45), transparent 30%), var(--sidebar);
+      color: #fff;
+      padding: 24px clamp(24px, 6vw, 88px) 78px;
+    }
+    nav, .hero-inner, main { max-width: 1120px; margin: 0 auto; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
+    nav a:not(.brand) { color: #dce2f0; text-decoration: none; font-size: .95rem; }
+    nav a:not(.brand):hover { color: #fff; }
+    .hero-inner { padding-top: 82px; }
+    .eyebrow { color: #aeb5ff; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 720px; margin: 12px 0 18px; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: .98; letter-spacing: -.065em; }
+    .intro { max-width: 620px; margin: 0; color: #dce2f0; font-size: clamp(1rem, 2vw, 1.18rem); }
+
+    main { padding: 54px 24px 80px; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 26px; }
+    .toolbar h2 { margin: 0; font-size: 1.35rem; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter { border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); cursor: pointer; padding: 8px 14px; font: inherit; font-size: .82rem; }
+    .filter:hover, .filter.active { border-color: var(--accent); background: #efefff; color: var(--accent-dark); }
+    .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .post { display: flex; flex-direction: column; min-height: 330px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+    .post:hover { transform: translateY(-4px); box-shadow: 0 22px 60px rgba(30, 42, 72, .14); }
+    .post-meta { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: .78rem; }
+    .tag { color: var(--accent-dark); font-weight: 750; }
+    .post h3 { margin: 22px 0 10px; font-size: 1.3rem; line-height: 1.2; letter-spacing: -.025em; }
+    .post p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .read { display: inline-block; margin-top: auto; padding-top: 24px; color: var(--accent-dark); font-size: .9rem; font-weight: 750; text-decoration: none; }
+    .read:hover { text-decoration: underline; }
+    .empty { display: none; color: var(--muted); }
+    .guide { margin-top: 58px; padding: 28px; border-radius: 18px; background: #ecebff; }
+    .guide h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    .guide p { margin: 0; color: #414568; }
+    code { padding: 2px 6px; border-radius: 5px; background: rgba(99, 91, 255, .12); color: var(--accent-dark); }
+    footer { padding: 28px 24px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .85rem; }
+
+    @media (max-width: 800px) {
+      .hero { padding-bottom: 58px; }
+      .hero-inner { padding-top: 62px; }
+      .posts { grid-template-columns: 1fr 1fr; }
+      .toolbar { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 560px) {
+      nav a:not(.brand) { display: none; }
+      .posts { grid-template-columns: 1fr; }
+      .post { min-height: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="./index.html">SCM</a>
+      <a href="./index.html">← Back to portfolio</a>
+    </nav>
+    <div class="hero-inner">
+      <div class="eyebrow">Notes from the build room</div>
+      <h1>Ideas, lessons, and things worth sharing.</h1>
+      <p class="intro">A collection of practical notes on software engineering, identity, developer tools, and the craft of building useful products.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <h2>Latest writing</h2>
+      <div class="filters" aria-label="Filter posts">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="engineering">Engineering</button>
+        <button class="filter" data-filter="identity">Identity</button>
+        <button class="filter" data-filter="career">Career</button>
+      </div>
+    </div>
+
+    <section class="posts" aria-live="polite">
+      <!-- Add new posts by copying a .post card. See BLOGGING.md for the workflow. -->
+      <article class="post" data-category="engineering">
+        <div class="post-meta"><span class="tag">Engineering</span><span>Coming soon</span></div>
+        <h3>Building software that stays maintainable</h3>
+        <p>Notes on making thoughtful trade-offs, keeping complexity visible, and designing code that future teammates can understand.</p>
+        <a class="read" href="#">Read the post →</a>
+      </article>
+      <article class="post" data-category="identity">
+        <div class="post-meta"><span class="tag">Identity</span><span>Coming soon</span></div>
+        <h3>Identity concepts I wish I knew earlier</h3>
+        <p>A friendly introduction to SSO, OAuth, OIDC, SAML, and the questions that help you choose the right tool.</p>
+        <a class="read" href="#">Read the post →</a>
+      </article>
+      <article class="post" data-category="career">
+        <div class="post-meta"><span class="tag">Career</span><span>Coming soon</span></div>
+        <h3>Learning in public as an engineer</h3>
+        <p>Why sharing small experiments and lessons can improve your thinking, your network, and the products you build.</p>
+        <a class="read" href="#">Read the post →</a>
+      </article>
+    </section>
+    <p class="empty">No posts in this category yet.</p>
+
+    <aside class="guide">
+      <h2>Want to publish a new post?</h2>
+      <p>Follow the quick guide in <code>BLOGGING.md</code>. The site is intentionally static, so a new post is just an HTML file and one card added to this page.</p>
+    </aside>
+  </main>
+
+  <footer>© 2026 Shubham Chandra Mishra · Built with plain HTML and CSS</footer>
+  <script>
+    const buttons = document.querySelectorAll('.filter');
+    const posts = document.querySelectorAll('.post');
+    const empty = document.querySelector('.empty');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      buttons.forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+      const filter = button.dataset.filter;
+      let visible = 0;
+      posts.forEach((post) => {
+        const show = filter === 'all' || post.dataset.category === filter;
+        post.style.display = show ? 'flex' : 'none';
+        if (show) visible += 1;
+      });
+      empty.style.display = visible ? 'none' : 'block';
+    }));
+  </script>
+</body>
+</html>
