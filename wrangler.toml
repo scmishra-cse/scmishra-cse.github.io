@@ -3,7 +3,7 @@ main = "cloudflare/worker.js"
 compatibility_date = "2024-09-01"
 
 [vars]
-AUTH_REDIRECT_URI = "https://scmishra-cse.workers.dev/auth/callback"
+AUTH_REDIRECT_URI = "https://scmishra-blog-admin.scmishra-cse.workers.dev/auth/callback"
 OWNER = "scmishra-cse"
 REPO = "scmishra-cse.github.io"
 ALLOWED_LOGIN = "scmishra-cse"
