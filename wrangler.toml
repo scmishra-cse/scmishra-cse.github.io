@@ -3,12 +3,12 @@ main = "cloudflare/worker.js"
 compatibility_date = "2024-09-01"
 
 [vars]
-AUTH_REDIRECT_URI = "https://blog-admin-worker.example.com/auth/callback"
+AUTH_REDIRECT_URI = "https://scmishra-cse.workers.dev/auth/callback"
 OWNER = "scmishra-cse"
 REPO = "scmishra-cse.github.io"
 ALLOWED_LOGIN = "scmishra-cse"
 
-# Add secrets in Cloudflare dashboard:
+# Add these with `npx wrangler secret put NAME`:
 # GITHUB_CLIENT_ID
 # GITHUB_CLIENT_SECRET
 # GITHUB_TOKEN
